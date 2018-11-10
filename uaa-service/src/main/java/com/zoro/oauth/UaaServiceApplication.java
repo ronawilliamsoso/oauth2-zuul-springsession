@@ -71,9 +71,9 @@ public class UaaServiceApplication extends WebMvcConfigurerAdapter {
         @Override
         protected void configure(AuthenticationManagerBuilder auth) throws Exception {
             auth.inMemoryAuthentication()
-                    .withUser("user").password("password").roles("USER")
+					.withUser("sam").password("123").roles("USER")
                     .and()
-                    .withUser("admin").password("admin").roles("ADMIN");
+					.withUser("admin").password("123").roles("ADMIN");
 //            auth.parentAuthenticationManager(authenticationManager);
         }
     }
@@ -98,9 +98,10 @@ public class UaaServiceApplication extends WebMvcConfigurerAdapter {
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
             clients.inMemory()
-                   .withClient("acme")
-                   .secret("acmesecret")
-                   .authorizedGrantTypes("authorization_code", "refresh_token","password")
+					.withClient("gate")
+					.secret("123")
+					.authorizedGrantTypes("authorization_code", "refresh_token", "password", "client_credentials",
+							"implicit")
                    .scopes("openid");
         }
 

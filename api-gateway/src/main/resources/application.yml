@@ -36,8 +36,8 @@ security:
     client:
       accessTokenUri: http://uaa-service/uaa/oauth/token
       userAuthorizationUri: /uaa/oauth/authorize
-      clientId: acme
-      clientSecret: acmesecret
+      clientId: gate
+      clientSecret: 123
     resource:
       jwt:
         keyValue: |

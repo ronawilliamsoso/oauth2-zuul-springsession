@@ -64,8 +64,12 @@ public class UaaServiceApplication extends WebMvcConfigurerAdapter {
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http.formLogin().loginPage("/login").permitAll().and().authorizeRequests()
-                .anyRequest().authenticated();
+			http.formLogin().loginPage("/login").permitAll().and().authorizeRequests().anyRequest().authenticated();
+            
+			/*
+			 * http.csrf().disable().requestMatchers().antMatchers("/login", "/uaa/oauth/**", "/oauth/**").and() .authorizeRequests().anyRequest() .authenticated().and().formLogin().permitAll();
+			 */
+
         }
 
         @Override

@@ -1,6 +1,12 @@
 spring:
   application:
     name: uaa-service
+#  session:
+#    store-type: redis    
+#  redis:
+#    host: localhost
+#    password: 123456
+#    port: 6379
 
 # Define the port where the UAA server would be running
 server:

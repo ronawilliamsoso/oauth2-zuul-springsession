@@ -99,15 +99,23 @@ public class UaaServiceApplication extends WebMvcConfigurerAdapter {
             return converter;
         }
 
-        @Override
-        public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-            clients.inMemory()
+		@Override
+		public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+			clients.inMemory()
 					.withClient("gate")
 					.secret("123")
 					.authorizedGrantTypes("authorization_code", "refresh_token", "password", "client_credentials",
 							"implicit")
-                   .scopes("openid");
-        }
+					.scopes("openid")
+					.and()
+					.withClient("orderclient")
+					.secret("123456")
+					.authorities("ROLE_TRUSTED_CLIENT")
+					.authorizedGrantTypes("authorization_code", "refresh_token", "password", "client_credentials",
+							"implicit")
+					.scopes("privateid")
+					.autoApprove(true);
+		}
 
         @Override
         public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {

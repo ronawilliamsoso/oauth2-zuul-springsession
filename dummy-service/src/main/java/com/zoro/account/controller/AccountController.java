@@ -23,7 +23,7 @@ public class AccountController {
 				: "Hello " + principal.getName() + " your payment account is payment001";
 	}
 
-	@PreAuthorize("#oauth2.hasScope('openid') and hasRole('ROLE_ADMIN')")
+	@PreAuthorize("#oauth2.hasScope('openid') and hasRole('ROLE_USER')")
 	@RequestMapping(value = "/publicResource", method = RequestMethod.GET)
 	@ResponseBody
 	public String publicResource(Principal principal) {

@@ -1,4 +1,4 @@
-package com.zoro;
+package com.zoro.uaa;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

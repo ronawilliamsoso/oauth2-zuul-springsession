@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>order</artifactId>
 
-	<parent>
-		<groupId>pl.piomin.services</groupId>
-		<artifactId>sample-spring-oauth2-microservices</artifactId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>com.zoro</groupId>
+        <artifactId>uaa-behind-zuul</artifactId>
+        <version>0.0.6</version>
+    </parent>
 
 	<dependencies>
 	<!--  

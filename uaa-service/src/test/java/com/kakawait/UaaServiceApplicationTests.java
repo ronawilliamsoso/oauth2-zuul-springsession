@@ -1,4 +1,4 @@
-package com.kakawait;
+package com.zoro;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

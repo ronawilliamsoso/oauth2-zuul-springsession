@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kakawait</groupId>
+    <groupId>com.zoro</groupId>
     <artifactId>uaa-behind-zuul</artifactId>
     <version>0.0.6</version>
     <packaging>pom</packaging>
@@ -16,9 +16,10 @@
     </parent>
 
     <modules>
-        <module>api-gateway</module>
+        <module>gateway-service</module>
         <module>service-registry</module>
-        <module>dummy-service</module>
+        <module>account-service</module>
+        <module>order-service</module>
         <module>uaa-service</module>
     </modules>
 
@@ -83,7 +84,7 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <imageName>kakawait/${project.artifactId}</imageName>
+                        <imageName>zoro/${project.artifactId}</imageName>
                         <imageTags>
                             <imageTag>${project.version}</imageTag>
                             <imageTag>latest</imageTag>

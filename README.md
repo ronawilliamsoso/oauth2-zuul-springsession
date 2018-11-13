@@ -4,7 +4,7 @@
 
 ## Disclamer
 
-**This project is *Proof of concept* (aka `PoC`)** (and code quality is not perfect), please before using in production review security concerns among other things. (See https://github.com/kakawait/uaa-behind-zuul-sample/issues/6)
+**This project is *Proof of concept* (aka `PoC`)** (and code quality is not perfect), please before using in production review security concerns among other things. (See https://github.com/zoro/uaa-behind-zuul-sample/issues/6)
 
 ## Change Log
 

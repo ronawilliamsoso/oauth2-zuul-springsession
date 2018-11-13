@@ -10,7 +10,7 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>com.kakawait</groupId>
+        <groupId>com.zoro</groupId>
         <artifactId>uaa-behind-zuul</artifactId>
         <version>0.0.6</version>
     </parent>
